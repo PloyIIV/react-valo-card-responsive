@@ -8,16 +8,16 @@ const valoAgent3 = 'https://plarium.com/wp-content/uploads/2025/05/valorant-char
 const valoTeam1 = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU8-liO05_CXe_A9m-PUzGaPd9QwtD1fod_Vk4Q9CGn_bRpu9nZjYKn3A&s=10'
 const valoTeam2 = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOeRg9ejM0BJ9dRusdcoiaEqR_m5mb5hPNVIrScyowha0rX0-v_-f5H7cY&s=10'
 
-const ValoRankCard = () => {
+const ValoRankCard = ({ playerName = 'Anonymous' }) => {
     return (
-        <div className="bg-white border-2 border-gray-300 rounded-3xl flex flex-col md:flex-row md:justify-center items-center p-2 shadow-2xl">
+        <div className="bg-white border-2 border-gray-300 rounded-3xl my-5 flex flex-col md:flex-row md:justify-center items-center p-2 shadow-2xl">
             <img src={userImg} className="w-full h-32 md:w-40 md:h-60 object-cover rounded-3xl" alt="user image" />
             
             <div className="px-5 mt-2 md:mt-0">
                 <h2 className="font-black text-center text-red-700">PLAYER CARD</h2>
                 <hr className="border-red-500 my-2" />
                 <div className="flex flex-col">
-                    <p>Username: <span className="font-bold italic text-[#7302b4]">PloyIIV</span></p>
+                    <p>Username: <span className="font-bold italic text-[#7302b4]">{playerName}</span></p>
                     <div>
                         
                         <p>Rank: <span className="font-bold italic text-[#7302b4]">Gold <img className="w-5 h-5 hidden md:inline-block" src={goldImg} alt="gold rank" /></span></p>
